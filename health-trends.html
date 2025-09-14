@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WorkerHelper - Digital Health Record System for Kerala Workers</title>
-    <meta name="description" content="WorkerHelper helps migrant workers in Kerala manage their digital health records and access health-related information.">
+    <title>Health Trends - WorkerHelper</title>
+    <meta name="description" content="Current health trends and disease patterns affecting workers in Kerala">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -14,7 +14,7 @@
         <nav class="nav">
             <div class="container">
                 <div class="nav-brand">
-                    <h1 class="logo">WorkerHelper</h1>
+                    <h1 class="logo"><a href="index.html">WorkerHelper</a></h1>
                     <p class="tagline" data-translate="tagline">Digital Health Records for Kerala Workers</p>
                 </div>
                 
@@ -67,36 +67,81 @@
     </header>
 
     <main>
-        <!-- Hero Section -->
-        <section id="home" class="hero">
+        <!-- Health Trends Section -->
+        <section class="health-trends page-section">
             <div class="container">
-                <div class="hero-content">
-                    <div class="hero-text">
-                        <h2 class="hero-title" data-translate="hero.title">
-                            Empowering Kerala Workers with Digital Health Records
-                        </h2>
-                        <p class="hero-description" data-translate="hero.description">
-                            WorkerHelper provides migrant workers in Kerala with easy access to digital health records, 
-                            medical information, and health resources in their native languages.
-                        </p>
-                        <div class="hero-buttons">
-                            <a href="health-trends.html" class="btn btn-primary" data-translate="hero.exploreHealth">Explore Health Insights</a>
-                            <button class="btn btn-secondary" id="learnMoreBtn" data-translate="hero.learnMore">Learn More</button>
-                        </div>
+                <div class="page-header">
+                    <h1 class="page-title" data-translate="healthTrends.title">Current Health Trends</h1>
+                    <p class="page-subtitle" data-translate="healthTrends.subtitle">
+                        Stay updated with the latest health trends and disease patterns affecting workers in Kerala
+                    </p>
+                </div>
+                <!-- Current Health News Section -->
+                <div class="health-news-section">
+                    <h2 data-translate="healthTrends.news.title">Latest Health News</h2>
+                    <p class="section-description" data-translate="healthTrends.news.subtitle">
+                        Stay informed with the latest health news, disease outbreaks, and medical discoveries
+                    </p>
+                    
+                    <!-- Loading indicator -->
+                    <div class="loading-indicator" id="newsLoading">
+                        <div class="loading-spinner"></div>
+                        <p data-translate="healthTrends.news.loading">Loading latest health news...</p>
                     </div>
-                    <div class="hero-image">
-                        <div class="placeholder-image">
-                            <i class="fas fa-heartbeat"></i>
-                            <p data-translate="hero.imageAlt">Health Care Illustration</p>
+                    
+                    <!-- News grid -->
+                    <div class="news-grid" id="newsGrid">
+                        <!-- News cards will be populated by JavaScript -->
+                    </div>
+                    
+                    <!-- Error message -->
+                    <div class="error-message" id="newsError" style="display: none;">
+                        <div class="error-icon">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </div>
+                        <h3 data-translate="healthTrends.news.errorTitle">Unable to Load News</h3>
+                        <p data-translate="healthTrends.news.errorMessage">
+                            We're having trouble loading the latest news. Please check your internet connection and try again.
+                        </p>
+                        <button class="retry-btn" id="retryNewsBtn" data-translate="healthTrends.news.retry">Retry</button>
+                    </div>
+                </div>
+
+                <!-- Featured Content Section -->
+                <div class="featured-content">
+                    <h2 data-translate="healthTrends.featured.title">Quick Health Tips</h2>
+                    
+                    <div class="featured-grid">
+                        <div class="featured-item">
+                            <div class="featured-icon">
+                                <i class="fas fa-exclamation-triangle"></i>
+                            </div>
+                            <h4 data-translate="healthTrends.featured.dengue.title">Dengue Prevention</h4>
+                            <p data-translate="healthTrends.featured.dengue.description">Current dengue outbreak areas and prevention measures for outdoor workers.</p>
+                        </div>
+                        
+                        <div class="featured-item">
+                            <div class="featured-icon">
+                                <i class="fas fa-thermometer-hot"></i>
+                            </div>
+                            <h4 data-translate="healthTrends.featured.heatwave.title">Heat Wave Safety</h4>
+                            <p data-translate="healthTrends.featured.heatwave.description">Guidelines for working safely during high temperature conditions.</p>
+                        </div>
+                        
+                        <div class="featured-item">
+                            <div class="featured-icon">
+                                <i class="fas fa-lungs"></i>
+                            </div>
+                            <h4 data-translate="healthTrends.featured.respiratory.title">Air Quality Protection</h4>
+                            <p data-translate="healthTrends.featured.respiratory.description">Respiratory health protection in high pollution areas.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
     </main>
 
-    <!-- About Us Modal/Section -->
+    <!-- About Us Modal -->
     <div class="about-overlay" id="aboutOverlay">
         <div class="about-modal">
             <div class="about-header">
@@ -137,6 +182,34 @@
                         Our platform has reduced healthcare barriers and improved health outcomes for the 
                         hardworking individuals who contribute significantly to Kerala's economy.
                     </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- News Prevention Modal -->
+    <div class="news-modal-overlay" id="newsModalOverlay">
+        <div class="news-modal">
+            <div class="news-modal-header">
+                <h2 id="newsModalTitle">Health Prevention Tips</h2>
+                <button class="close-btn" id="closeNewsModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="news-modal-content">
+                <div class="news-summary" id="newsSummary">
+                    <!-- News summary will be populated by JavaScript -->
+                </div>
+                
+                <div class="prevention-tabs">
+                    <button class="tab-btn active" data-tab="dos" data-translate="healthTrends.prevention.dos">Do's</button>
+                    <button class="tab-btn" data-tab="donts" data-translate="healthTrends.prevention.donts">Don'ts</button>
+                    <button class="tab-btn" data-tab="safety" data-translate="healthTrends.prevention.safety">Safety Measures</button>
+                    <button class="tab-btn" data-tab="diet" data-translate="healthTrends.prevention.diet">Diet Tips</button>
+                </div>
+                
+                <div class="tab-content" id="newsTabContent">
+                    <!-- Content will be populated by JavaScript -->
                 </div>
             </div>
         </div>

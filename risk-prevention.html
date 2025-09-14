@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WorkerHelper - Digital Health Record System for Kerala Workers</title>
-    <meta name="description" content="WorkerHelper helps migrant workers in Kerala manage their digital health records and access health-related information.">
+    <title>Risk & Prevention - WorkerHelper</title>
+    <meta name="description" content="Job-specific health risks and prevention strategies for Kerala workers">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -14,7 +14,7 @@
         <nav class="nav">
             <div class="container">
                 <div class="nav-brand">
-                    <h1 class="logo">WorkerHelper</h1>
+                    <h1 class="logo"><a href="index.html">WorkerHelper</a></h1>
                     <p class="tagline" data-translate="tagline">Digital Health Records for Kerala Workers</p>
                 </div>
                 
@@ -67,36 +67,35 @@
     </header>
 
     <main>
-        <!-- Hero Section -->
-        <section id="home" class="hero">
+        <!-- Risk & Prevention Section -->
+        <section class="risk-prevention page-section">
             <div class="container">
-                <div class="hero-content">
-                    <div class="hero-text">
-                        <h2 class="hero-title" data-translate="hero.title">
-                            Empowering Kerala Workers with Digital Health Records
-                        </h2>
-                        <p class="hero-description" data-translate="hero.description">
-                            WorkerHelper provides migrant workers in Kerala with easy access to digital health records, 
-                            medical information, and health resources in their native languages.
-                        </p>
-                        <div class="hero-buttons">
-                            <a href="health-trends.html" class="btn btn-primary" data-translate="hero.exploreHealth">Explore Health Insights</a>
-                            <button class="btn btn-secondary" id="learnMoreBtn" data-translate="hero.learnMore">Learn More</button>
-                        </div>
+                <div class="page-header">
+                    <h1 class="page-title" data-translate="riskPrevention.title">Job-Specific Health Risks</h1>
+                    <p class="page-subtitle" data-translate="riskPrevention.subtitle">
+                        Select your job type to see relevant health risks and prevention strategies
+                    </p>
+                </div>
+                
+                <div class="job-selector">
+                    <h3 data-translate="riskPrevention.selectJob">Select Your Job Type:</h3>
+                    <div class="job-buttons">
+                        <button class="job-btn active" data-job="construction" data-translate="riskPrevention.jobs.construction">Construction</button>
+                        <button class="job-btn" data-job="fishery" data-translate="riskPrevention.jobs.fishery">Fishery</button>
+                        <button class="job-btn" data-job="factory" data-translate="riskPrevention.jobs.factory">Factory</button>
+                        <button class="job-btn" data-job="agriculture" data-translate="riskPrevention.jobs.agriculture">Agriculture</button>
+                        <button class="job-btn" data-job="domestic" data-translate="riskPrevention.jobs.domestic">Domestic Work</button>
                     </div>
-                    <div class="hero-image">
-                        <div class="placeholder-image">
-                            <i class="fas fa-heartbeat"></i>
-                            <p data-translate="hero.imageAlt">Health Care Illustration</p>
-                        </div>
-                    </div>
+                </div>
+                
+                <div class="risks-container" id="risksContainer">
+                    <!-- Risk cards will be populated by JavaScript -->
                 </div>
             </div>
         </section>
-
     </main>
 
-    <!-- About Us Modal/Section -->
+    <!-- About Us Modal -->
     <div class="about-overlay" id="aboutOverlay">
         <div class="about-modal">
             <div class="about-header">
@@ -137,6 +136,33 @@
                         Our platform has reduced healthcare barriers and improved health outcomes for the 
                         hardworking individuals who contribute significantly to Kerala's economy.
                     </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Risk Prevention Modal -->
+    <div class="risk-modal-overlay" id="riskModalOverlay">
+        <div class="risk-modal">
+            <div class="risk-modal-header">
+                <h2 id="riskModalTitle">Risk Prevention Details</h2>
+                <button class="close-btn" id="closeRiskModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="risk-modal-content">
+                <div class="risk-severity" id="riskSeverity">High Risk</div>
+                
+                <div class="prevention-tabs">
+                    <button class="tab-btn active" data-tab="dos" data-translate="riskPrevention.tabs.dos">Do's</button>
+                    <button class="tab-btn" data-tab="donts" data-translate="riskPrevention.tabs.donts">Don'ts</button>
+                    <button class="tab-btn" data-tab="safety" data-translate="riskPrevention.tabs.safety">Safety Measures</button>
+                    <button class="tab-btn" data-tab="diet" data-translate="riskPrevention.tabs.diet">Diet Suggestions</button>
+                    <button class="tab-btn" data-tab="videos" data-translate="riskPrevention.tabs.videos">Videos</button>
+                </div>
+                
+                <div class="tab-content" id="tabContent">
+                    <!-- Content will be populated by JavaScript -->
                 </div>
             </div>
         </div>

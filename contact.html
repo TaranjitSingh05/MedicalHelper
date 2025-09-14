@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WorkerHelper - Digital Health Record System for Kerala Workers</title>
-    <meta name="description" content="WorkerHelper helps migrant workers in Kerala manage their digital health records and access health-related information.">
+    <title>Contact Us - WorkerHelper</title>
+    <meta name="description" content="Get in touch with WorkerHelper for support, questions, and assistance">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -14,7 +14,7 @@
         <nav class="nav">
             <div class="container">
                 <div class="nav-brand">
-                    <h1 class="logo">WorkerHelper</h1>
+                    <h1 class="logo"><a href="index.html">WorkerHelper</a></h1>
                     <p class="tagline" data-translate="tagline">Digital Health Records for Kerala Workers</p>
                 </div>
                 
@@ -46,17 +46,7 @@
                         <a href="#" class="dropdown-toggle" data-translate="nav.healthInsights">Health Insights</a>
                         <ul class="dropdown-menu">
                             <li><a href="health-trends.html" data-translate="nav.healthTrends">Health Trends</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-translate="nav.riskPrevention">Risk & Prevention</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="jobs/construction.html">Construction</a></li>
-                            <li><a href="jobs/fishery.html">Fishery</a></li>
-                            <li><a href="jobs/factory.html">Factory</a></li>
-                            <li><a href="jobs/agriculture.html">Agriculture</a></li>
-                            <li><a href="jobs/domestic.html">Domestic Work</a></li>
-                            <li><a href="risk-prevention.html">All Jobs Overview</a></li>
+                            <li><a href="risk-prevention.html" data-translate="nav.riskPrevention">Risk & Prevention</a></li>
                         </ul>
                     </li>
                     <li><a href="contact.html" data-translate="nav.contact">Contact</a></li>
@@ -67,36 +57,106 @@
     </header>
 
     <main>
-        <!-- Hero Section -->
-        <section id="home" class="hero">
+        <!-- Contact Section -->
+        <section class="contact page-section">
             <div class="container">
-                <div class="hero-content">
-                    <div class="hero-text">
-                        <h2 class="hero-title" data-translate="hero.title">
-                            Empowering Kerala Workers with Digital Health Records
-                        </h2>
-                        <p class="hero-description" data-translate="hero.description">
-                            WorkerHelper provides migrant workers in Kerala with easy access to digital health records, 
-                            medical information, and health resources in their native languages.
-                        </p>
-                        <div class="hero-buttons">
-                            <a href="health-trends.html" class="btn btn-primary" data-translate="hero.exploreHealth">Explore Health Insights</a>
-                            <button class="btn btn-secondary" id="learnMoreBtn" data-translate="hero.learnMore">Learn More</button>
+                <div class="page-header">
+                    <h1 class="page-title" data-translate="contact.title">Get in Touch</h1>
+                    <p class="page-subtitle" data-translate="contact.subtitle">
+                        Need help or have questions? We're here to support you
+                    </p>
+                </div>
+                
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4 data-translate="contact.phone.title">Emergency Helpline</h4>
+                            <p>+91-XXX-XXXX-XXX</p>
+                            <small data-translate="contact.phone.available">Available 24/7 for emergencies</small>
                         </div>
                     </div>
-                    <div class="hero-image">
-                        <div class="placeholder-image">
-                            <i class="fas fa-heartbeat"></i>
-                            <p data-translate="hero.imageAlt">Health Care Illustration</p>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4 data-translate="contact.email.title">Email Support</h4>
+                            <p>support@workerhelper.in</p>
+                            <small data-translate="contact.email.response">We respond within 24 hours</small>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4 data-translate="contact.location.title">Office Location</h4>
+                            <p data-translate="contact.location.address">Kerala, India</p>
+                            <small data-translate="contact.location.hours">Mon-Fri: 9 AM - 6 PM</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Emergency Services Section -->
+                <div class="emergency-services">
+                    <h2 data-translate="contact.emergency.title">Emergency Services</h2>
+                    <div class="emergency-grid">
+                        <div class="emergency-card">
+                            <i class="fas fa-ambulance"></i>
+                            <h4 data-translate="contact.emergency.medical">Medical Emergency</h4>
+                            <p class="emergency-number">108</p>
+                            <p data-translate="contact.emergency.medicalDesc">For medical emergencies and ambulance services</p>
+                        </div>
+                        
+                        <div class="emergency-card">
+                            <i class="fas fa-shield-alt"></i>
+                            <h4 data-translate="contact.emergency.police">Police</h4>
+                            <p class="emergency-number">100</p>
+                            <p data-translate="contact.emergency.policeDesc">For safety concerns and police assistance</p>
+                        </div>
+                        
+                        <div class="emergency-card">
+                            <i class="fas fa-fire"></i>
+                            <h4 data-translate="contact.emergency.fire">Fire Department</h4>
+                            <p class="emergency-number">101</p>
+                            <p data-translate="contact.emergency.fireDesc">For fire emergencies and rescue operations</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Support Categories Section -->
+                <div class="support-categories">
+                    <h2 data-translate="contact.support.title">How Can We Help?</h2>
+                    <div class="support-grid">
+                        <div class="support-card">
+                            <i class="fas fa-user-md"></i>
+                            <h4 data-translate="contact.support.health">Health Assistance</h4>
+                            <p data-translate="contact.support.healthDesc">Medical consultations and health record support</p>
+                        </div>
+                        
+                        <div class="support-card">
+                            <i class="fas fa-language"></i>
+                            <h4 data-translate="contact.support.language">Language Support</h4>
+                            <p data-translate="contact.support.languageDesc">Assistance in Hindi, Bengali, and Punjabi</p>
+                        </div>
+                        
+                        <div class="support-card">
+                            <i class="fas fa-info-circle"></i>
+                            <h4 data-translate="contact.support.general">General Information</h4>
+                            <p data-translate="contact.support.generalDesc">Questions about services and features</p>
+                        </div>
+                        
+                        <div class="support-card">
+                            <i class="fas fa-tools"></i>
+                            <h4 data-translate="contact.support.technical">Technical Support</h4>
+                            <p data-translate="contact.support.technicalDesc">Help with using the platform and features</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
     </main>
 
-    <!-- About Us Modal/Section -->
+    <!-- About Us Modal -->
     <div class="about-overlay" id="aboutOverlay">
         <div class="about-modal">
             <div class="about-header">
