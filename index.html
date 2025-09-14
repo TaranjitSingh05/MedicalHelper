@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WorkerHelper - Digital Health Record System for Kerala Workers</title>
+    <meta name="description" content="WorkerHelper helps migrant workers in Kerala manage their digital health records and access health-related information.">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="container">
+                <div class="nav-brand">
+                    <h1 class="logo">WorkerHelper</h1>
+                    <p class="tagline" data-translate="tagline">Digital Health Records for Kerala Workers</p>
+                </div>
+                
+                <div class="nav-controls">
+                    <div class="language-selector">
+                        <button class="lang-btn" id="langBtn">
+                            <i class="fas fa-globe"></i>
+                            <span id="currentLang">English</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="lang-dropdown" id="langDropdown">
+                            <button class="lang-option" data-lang="en">English</button>
+                            <button class="lang-option" data-lang="hi">हिंदी</button>
+                            <button class="lang-option" data-lang="bn">বাংলা</button>
+                            <button class="lang-option" data-lang="pa">ਪੰਜਾਬੀ</button>
+                        </div>
+                    </div>
+                    
+                    <button class="menu-toggle" id="menuToggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#home" data-translate="nav.home">Home</a></li>
+                    <li><a href="#services" data-translate="nav.services">Services</a></li>
+                    <li><a href="#health-articles" data-translate="nav.health">Health Articles</a></li>
+                    <li><a href="#contact" data-translate="nav.contact">Contact</a></li>
+                    <li><button class="about-btn" id="aboutBtn" data-translate="nav.about">About Us</button></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h2 class="hero-title" data-translate="hero.title">
+                            Empowering Kerala Workers with Digital Health Records
+                        </h2>
+                        <p class="hero-description" data-translate="hero.description">
+                            WorkerHelper provides migrant workers in Kerala with easy access to digital health records, 
+                            medical information, and health resources in their native languages.
+                        </p>
+                        <div class="hero-buttons">
+                            <button class="btn btn-primary" data-translate="hero.getStarted">Get Started</button>
+                            <button class="btn btn-secondary" id="learnMoreBtn" data-translate="hero.learnMore">Learn More</button>
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <div class="placeholder-image">
+                            <i class="fas fa-heartbeat"></i>
+                            <p data-translate="hero.imageAlt">Health Care Illustration</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services">
+            <div class="container">
+                <h2 class="section-title" data-translate="services.title">How We Help Migrant Workers</h2>
+                <p class="section-subtitle" data-translate="services.subtitle">
+                    Comprehensive digital health solutions designed specifically for Kerala's migrant worker community
+                </p>
+                
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-file-medical-alt"></i>
+                        </div>
+                        <h3 data-translate="services.digitalRecords.title">Digital Health Records</h3>
+                        <p data-translate="services.digitalRecords.description">
+                            Secure, accessible digital storage of medical records, prescriptions, and health history
+                        </p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-language"></i>
+                        </div>
+                        <h3 data-translate="services.multiLanguage.title">Multi-Language Support</h3>
+                        <p data-translate="services.multiLanguage.description">
+                            Access health information in English, Hindi, Bengali, and Punjabi for better understanding
+                        </p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-hospital"></i>
+                        </div>
+                        <h3 data-translate="services.hospitalNetwork.title">Hospital Network</h3>
+                        <p data-translate="services.hospitalNetwork.description">
+                            Connect with healthcare providers and hospitals across Kerala for seamless care
+                        </p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3 data-translate="services.mobileAccess.title">Mobile Access</h3>
+                        <p data-translate="services.mobileAccess.description">
+                            Access your health records anytime, anywhere through our mobile-friendly platform
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Health Articles Section -->
+        <section id="health-articles" class="health-articles">
+            <div class="container">
+                <h2 class="section-title" data-translate="articles.title">Health Articles & Resources</h2>
+                <p class="section-subtitle" data-translate="articles.subtitle">
+                    Stay informed about important health topics and disease prevention
+                </p>
+                
+                <div class="articles-grid">
+                    <article class="article-card">
+                        <div class="article-image">
+                            <div class="placeholder-image">
+                                <i class="fas fa-virus"></i>
+                            </div>
+                        </div>
+                        <div class="article-content">
+                            <h3 data-translate="articles.prevention.title">Disease Prevention Guide</h3>
+                            <p data-translate="articles.prevention.description">
+                                Learn about common diseases and how to prevent them in tropical climates
+                            </p>
+                            <a href="#" class="article-link" data-translate="articles.readMore">Read More</a>
+                        </div>
+                    </article>
+                    
+                    <article class="article-card">
+                        <div class="article-image">
+                            <div class="placeholder-image">
+                                <i class="fas fa-stethoscope"></i>
+                            </div>
+                        </div>
+                        <div class="article-content">
+                            <h3 data-translate="articles.checkups.title">Regular Health Checkups</h3>
+                            <p data-translate="articles.checkups.description">
+                                Importance of regular health screenings for migrant workers
+                            </p>
+                            <a href="#" class="article-link" data-translate="articles.readMore">Read More</a>
+                        </div>
+                    </article>
+                    
+                    <article class="article-card">
+                        <div class="article-image">
+                            <div class="placeholder-image">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                        </div>
+                        <div class="article-content">
+                            <h3 data-translate="articles.mental.title">Mental Health Support</h3>
+                            <p data-translate="articles.mental.description">
+                                Resources and support for maintaining good mental health while working away from home
+                            </p>
+                            <a href="#" class="article-link" data-translate="articles.readMore">Read More</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title" data-translate="contact.title">Get in Touch</h2>
+                <p class="section-subtitle" data-translate="contact.subtitle">
+                    Need help or have questions? We're here to support you
+                </p>
+                
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4 data-translate="contact.phone.title">Emergency Helpline</h4>
+                            <p>+91-XXX-XXXX-XXX</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4 data-translate="contact.email.title">Email Support</h4>
+                            <p>support@workerhelper.in</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4 data-translate="contact.location.title">Office Location</h4>
+                            <p data-translate="contact.location.address">Kerala, India</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- About Us Modal/Section -->
+    <div class="about-overlay" id="aboutOverlay">
+        <div class="about-modal">
+            <div class="about-header">
+                <h2 data-translate="about.title">About WorkerHelper</h2>
+                <button class="close-btn" id="closeAbout">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3 data-translate="about.mission.title">Our Mission</h3>
+                    <p data-translate="about.mission.description">
+                        WorkerHelper was created to bridge the healthcare gap for migrant workers in Kerala. 
+                        We understand the challenges faced by workers who move from different states to work in Kerala, 
+                        often struggling with language barriers and limited access to healthcare information.
+                    </p>
+                    
+                    <h3 data-translate="about.vision.title">Our Vision</h3>
+                    <p data-translate="about.vision.description">
+                        To create a comprehensive digital health ecosystem that empowers every migrant worker in Kerala 
+                        with easy access to their health records, medical information, and healthcare services in their 
+                        preferred language.
+                    </p>
+                    
+                    <h3 data-translate="about.features.title">Key Features</h3>
+                    <ul class="about-features">
+                        <li data-translate="about.features.secure">Secure digital health record storage</li>
+                        <li data-translate="about.features.multilingual">Multi-language support (English, Hindi, Bengali, Punjabi)</li>
+                        <li data-translate="about.features.accessible">24/7 accessible health information</li>
+                        <li data-translate="about.features.network">Connected healthcare provider network</li>
+                        <li data-translate="about.features.emergency">Emergency contact and support</li>
+                    </ul>
+                    
+                    <h3 data-translate="about.impact.title">Our Impact</h3>
+                    <p data-translate="about.impact.description">
+                        Since our launch, we have helped thousands of migrant workers access better healthcare, 
+                        maintain their health records, and connect with medical professionals across Kerala. 
+                        Our platform has reduced healthcare barriers and improved health outcomes for the 
+                        hardworking individuals who contribute significantly to Kerala's economy.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>WorkerHelper</h3>
+                    <p data-translate="footer.description">
+                        Empowering Kerala workers with digital health solutions
+                    </p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 data-translate="footer.quickLinks">Quick Links</h4>
+                    <ul>
+                        <li><a href="#home" data-translate="nav.home">Home</a></li>
+                        <li><a href="#services" data-translate="nav.services">Services</a></li>
+                        <li><a href="#health-articles" data-translate="nav.health">Health Articles</a></li>
+                        <li><a href="#contact" data-translate="nav.contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 data-translate="footer.support">Support</h4>
+                    <ul>
+                        <li><a href="#" data-translate="footer.help">Help Center</a></li>
+                        <li><a href="#" data-translate="footer.privacy">Privacy Policy</a></li>
+                        <li><a href="#" data-translate="footer.terms">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p data-translate="footer.copyright">
+                    &copy; 2024 WorkerHelper. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/translations.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
