@@ -211,6 +211,21 @@ a {
     transition: all 0.3s ease;
 }
 
+/* Nested dropdown (submenu) */
+.nav-menu .dropdown-sub {
+    position: relative;
+}
+.nav-menu .dropdown-sub > .dropdown-menu {
+    top: 0;
+    left: 100%;
+    min-width: 220px;
+}
+.nav-menu .dropdown-sub:hover > .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
 .dropdown-toggle:hover {
     background: #f8f9fa;
     color: #667eea;
