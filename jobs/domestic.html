@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Domestic Workers - Risks & Prevention</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <header class="header">
+    <nav class="nav">
+      <div class="container">
+        <div class="nav-brand">
+          <h1 class="logo"><a href="../index.html">WorkerHelper</a></h1>
+          <p class="tagline" data-translate="tagline">Digital Health Records for Kerala Workers</p>
+        </div>
+        <div class="nav-controls">
+          <div class="language-selector">
+            <button class="lang-btn" id="langBtn">
+              <i class="fas fa-globe"></i>
+              <span id="currentLang">English</span>
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="lang-dropdown" id="langDropdown">
+              <button class="lang-option" data-lang="en">English</button>
+              <button class="lang-option" data-lang="hi">हिंदी</button>
+              <button class="lang-option" data-lang="bn">বাংলা</button>
+              <button class="lang-option" data-lang="pa">ਪੰਜਾਬੀ</button>
+            </div>
+          </div>
+          <button class="menu-toggle" id="menuToggle">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="../index.html" data-translate="nav.home">Home</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-translate="nav.healthInsights">Health Insights</a>
+            <ul class="dropdown-menu">
+              <li><a href="../health-trends.html" data-translate="nav.healthTrends">Health Trends</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-translate="nav.riskPrevention">Risk & Prevention</a>
+            <ul class="dropdown-menu">
+              <li><a href="construction.html">Construction</a></li>
+              <li><a href="fishery.html">Fishery</a></li>
+              <li><a href="factory.html">Factory</a></li>
+              <li><a href="agriculture.html">Agriculture</a></li>
+              <li><a href="domestic.html">Domestic Work</a></li>
+              <li><a href="../risk-prevention.html">All Jobs Overview</a></li>
+            </ul>
+          </li>
+          <li><a href="../contact.html" data-translate="nav.contact">Contact</a></li>
+          <li><button class="about-btn" id="aboutBtn" data-translate="nav.about">About Us</button></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-section">
+      <div class="container">
+        <div class="page-header">
+          <h1 class="page-title">Domestic Workers</h1>
+          <p class="page-subtitle">Health risks and preventive measures for domestic helpers and caregivers.</p>
+        </div>
+
+        <div style="margin-bottom: 2rem;">
+          <div style="height: 320px; border-radius: 16px; overflow: hidden; position: relative; box-shadow: 0 8px 32px rgba(0,0,0,0.12);">
+            <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=1600&auto=format&fit=crop" alt="Domestic Work" style="width:100%; height:100%; object-fit:cover; filter: contrast(1.05) saturate(1.05);" />
+          </div>
+        </div>
+
+        <section style="margin-bottom: 2rem;">
+          <h2>About this job</h2>
+          <p>Domestic work involves cleaning, cooking, washing, childcare and eldercare. Hazards include exposure to strong cleaning agents, slips and falls on wet floors, lifting-related strain, and social isolation. Safe practices reduce risks.</p>
+        </section>
+
+        <section style="margin-bottom: 2rem;">
+          <h2>Common Diseases and Health Risks</h2>
+          <div class="risks-container">
+            <div class="risk-card">
+              <div class="risk-severity medium">Medium</div>
+              <h4>Chemical Irritation</h4>
+              <p>Skin and respiratory irritation due to cleaning agents and aerosols.</p>
+            </div>
+            <div class="risk-card">
+              <div class="risk-severity medium">Medium</div>
+              <h4>Slips, Trips & Falls</h4>
+              <p>Wet surfaces and cluttered areas increase fall risk while working.</p>
+            </div>
+            <div class="risk-card">
+              <div class="risk-severity low">Low</div>
+              <h4>Musculoskeletal Strain</h4>
+              <p>Back and joint pain from repetitive scrubbing, lifting and bending.</p>
+            </div>
+            <div class="risk-card">
+              <div class="risk-severity low">Low</div>
+              <h4>Allergies & Asthma</h4>
+              <p>Dust, perfumes, or pet dander can trigger respiratory issues.</p>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2>Preventive Tips</h2>
+          <div class="prevention-tabs" style="margin-top: 1rem;">
+            <button class="tab-btn active" data-tab="dos">Do's</button>
+            <button class="tab-btn" data-tab="donts">Don'ts</button>
+            <button class="tab-btn" data-tab="safety">Safety Measures</button>
+            <button class="tab-btn" data-tab="diet">Diet Suggestions</button>
+          </div>
+          <div class="tab-content" id="jobTabContent" style="margin-top: 1rem;"></div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>WorkerHelper</h3>
+          <p data-translate="footer.description">Empowering Kerala workers with digital health solutions</p>
+        </div>
+        <div class="footer-section">
+          <h4 data-translate="footer.quickLinks">Quick Links</h4>
+          <ul>
+            <li><a href="../index.html" data-translate="nav.home">Home</a></li>
+            <li><a href="../health-trends.html" data-translate="nav.healthTrends">Health Trends</a></li>
+            <li><a href="../risk-prevention.html" data-translate="nav.riskPrevention">Risk & Prevention</a></li>
+            <li><a href="../contact.html" data-translate="nav.contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4 data-translate="footer.support">Support</h4>
+          <ul>
+            <li><a href="#" data-translate="footer.help">Help Center</a></li>
+            <li><a href="#" data-translate="footer.privacy">Privacy Policy</a></li>
+            <li><a href="#" data-translate="footer.terms">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p data-translate="footer.copyright">&copy; 2024 WorkerHelper. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/translations.js"></script>
+  <script src="../js/script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const prevention = {
+        dos: [
+          'Use gloves and masks when handling strong cleaners',
+          'Mop in sections and use caution signs for wet floors',
+          'Lift with knees bent and keep loads close to body',
+          'Ventilate rooms while using sprays or perfumes',
+          'Take short breaks for stretching between tasks'
+        ],
+        donts: [
+          "Don’t mix bleach with ammonia or acids",
+          "Don’t stand on unstable stools or chairs",
+          "Don’t overreach from ladders—move and refit",
+          "Don’t ignore early symptoms of dermatitis or cough",
+          "Don’t work long hours without hydration and rest"
+        ],
+        safety: [
+          'Store chemicals out of children’s reach and labeled',
+          'Use non-slip footwear; keep pathways clear of clutter',
+          'Wear back support for lifting if advised',
+          'Use HEPA vacuums for dust-sensitive homes',
+          'Keep emergency numbers saved and accessible'
+        ],
+        diet: [
+          'Stay hydrated; keep a water bottle nearby',
+          'Eat light, frequent meals for steady energy',
+          'Include fruits, nuts, and yogurt as quick snacks',
+          'Avoid excessive caffeine that dehydrates',
+          'Consider multivitamins if recommended'
+        ]
+      };
+
+      function renderTab(tab) {
+        const el = document.getElementById('jobTabContent');
+        const items = prevention[tab] || [];
+        el.innerHTML = `<ul>${items.map(i => `<li>${i}</li>`).join('')}</ul>`;
+      }
+
+      document.querySelectorAll('.tab-btn').forEach(b => b.addEventListener('click', () => {
+        document.querySelectorAll('.tab-btn').forEach(x => x.classList.remove('active'));
+        b.classList.add('active');
+        renderTab(b.getAttribute('data-tab'));
+      }));
+
+      renderTab('dos');
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agriculture Workers - Risks & Prevention</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <header class="header">
+    <nav class="nav">
+      <div class="container">
+        <div class="nav-brand">
+          <h1 class="logo"><a href="../index.html">WorkerHelper</a></h1>
+          <p class="tagline" data-translate="tagline">Digital Health Records for Kerala Workers</p>
+        </div>
+        <div class="nav-controls">
+          <div class="language-selector">
+            <button class="lang-btn" id="langBtn">
+              <i class="fas fa-globe"></i>
+              <span id="currentLang">English</span>
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="lang-dropdown" id="langDropdown">
+              <button class="lang-option" data-lang="en">English</button>
+              <button class="lang-option" data-lang="hi">हिंदी</button>
+              <button class="lang-option" data-lang="bn">বাংলা</button>
+              <button class="lang-option" data-lang="pa">ਪੰਜਾਬੀ</button>
+            </div>
+          </div>
+          <button class="menu-toggle" id="menuToggle">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="../index.html" data-translate="nav.home">Home</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-translate="nav.healthInsights">Health Insights</a>
+            <ul class="dropdown-menu">
+              <li><a href="../health-trends.html" data-translate="nav.healthTrends">Health Trends</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-translate="nav.riskPrevention">Risk & Prevention</a>
+            <ul class="dropdown-menu">
+              <li><a href="construction.html">Construction</a></li>
+              <li><a href="fishery.html">Fishery</a></li>
+              <li><a href="factory.html">Factory</a></li>
+              <li><a href="agriculture.html">Agriculture</a></li>
+              <li><a href="domestic.html">Domestic Work</a></li>
+              <li><a href="../risk-prevention.html">All Jobs Overview</a></li>
+            </ul>
+          </li>
+          <li><a href="../contact.html" data-translate="nav.contact">Contact</a></li>
+          <li><button class="about-btn" id="aboutBtn" data-translate="nav.about">About Us</button></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-section">
+      <div class="container">
+        <div class="page-header">
+          <h1 class="page-title">Agriculture Workers</h1>
+          <p class="page-subtitle">Health risks and prevention measures for farm and field work.</p>
+        </div>
+
+        <div style="margin-bottom: 2rem;">
+          <div style="height: 320px; border-radius: 16px; overflow: hidden; position: relative; box-shadow: 0 8px 32px rgba(0,0,0,0.12);">
+            <img src="https://images.unsplash.com/photo-1524594081293-190a2fe0baae?q=80&w=1600&auto=format&fit=crop" alt="Agriculture Work" style="width:100%; height:100%; object-fit:cover; filter: contrast(1.05) saturate(1.05);" />
+          </div>
+        </div>
+
+        <section style="margin-bottom: 2rem;">
+          <h2>About this job</h2>
+          <p>Agriculture involves planting, harvesting, and handling crops or livestock. Hazards include pesticide exposure, tool injuries, animal bites, extreme weather, and repetitive strain. Training and protective measures reduce risks.</p>
+        </section>
+
+        <section style="margin-bottom: 2rem;">
+          <h2>Common Diseases and Health Risks</h2>
+          <div class="risks-container">
+            <div class="risk-card">
+              <div class="risk-severity high">High</div>
+              <h4>Pesticide Poisoning</h4>
+              <p>Skin, eye, and respiratory symptoms due to agrochemicals.</p>
+            </div>
+            <div class="risk-card">
+              <div class="risk-severity medium">Medium</div>
+              <h4>Tool/Equipment Injuries</h4>
+              <p>Cuts and lacerations from sickles, tractors, and harvesters.</p>
+            </div>
+            <div class="risk-card">
+              <div class="risk-severity medium">Medium</div>
+              <h4>Animal Bites & Zoonoses</h4>
+              <p>Infections from livestock handling (leptospirosis, brucellosis).</p>
+            </div>
+            <div class="risk-card">
+              <div class="risk-severity low">Low</div>
+              <h4>Heat & Weather Exposure</h4>
+              <p>Heat stress, dehydration, and UV damage during field work.</p>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2>Preventive Tips</h2>
+          <div class="prevention-tabs" style="margin-top: 1rem;">
+            <button class="tab-btn active" data-tab="dos">Do's</button>
+            <button class="tab-btn" data-tab="donts">Don'ts</button>
+            <button class="tab-btn" data-tab="safety">Safety Measures</button>
+            <button class="tab-btn" data-tab="diet">Diet Suggestions</button>
+          </div>
+          <div class="tab-content" id="jobTabContent" style="margin-top: 1rem;"></div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>WorkerHelper</h3>
+          <p data-translate="footer.description">Empowering Kerala workers with digital health solutions</p>
+        </div>
+        <div class="footer-section">
+          <h4 data-translate="footer.quickLinks">Quick Links</h4>
+          <ul>
+            <li><a href="../index.html" data-translate="nav.home">Home</a></li>
+            <li><a href="../health-trends.html" data-translate="nav.healthTrends">Health Trends</a></li>
+            <li><a href="../risk-prevention.html" data-translate="nav.riskPrevention">Risk & Prevention</a></li>
+            <li><a href="../contact.html" data-translate="nav.contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4 data-translate="footer.support">Support</h4>
+          <ul>
+            <li><a href="#" data-translate="footer.help">Help Center</a></li>
+            <li><a href="#" data-translate="footer.privacy">Privacy Policy</a></li>
+            <li><a href="#" data-translate="footer.terms">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p data-translate="footer.copyright">&copy; 2024 WorkerHelper. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/translations.js"></script>
+  <script src="../js/script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const prevention = {
+        dos: [
+          'Use PPE for chemicals: gloves, masks, goggles, coveralls',
+          'Follow label/dilution instructions for pesticides',
+          'Wash hands and change clothes after spraying',
+          'Use guards on rotating shafts; maintain sharp tools safely',
+          'Take shaded breaks; hydrate frequently during heat'
+        ],
+        donts: [
+          "Don’t mix chemicals without guidance or proper PPE",
+          "Don’t enter fields immediately after spraying (observe REI)",
+          "Don’t handle livestock without vaccination and training",
+          "Don’t ride on tractor fenders or unsecured loads",
+          "Don’t ignore early signs of heat exhaustion"
+        ],
+        safety: [
+          'Use pesticide storage with locks and spill containment',
+          'Keep clean water and soap available in fields',
+          'Train on safe animal handling and zoonosis prevention',
+          'Plan work for cooler hours; use wide-brim hats/sunscreen',
+          'Maintain first aid kits and emergency contacts'
+        ],
+        diet: [
+          'ORS and water; avoid alcohol and sugary drinks',
+          'Fresh fruits/vegetables; iron- and calcium-rich foods',
+          'Small frequent meals; avoid heavy meals before heat',
+          'Protein sources (pulses, eggs, dairy) for recovery',
+          'Include bananas and coconut water for electrolytes'
+        ]
+      };
+
+      function renderTab(tab) {
+        const el = document.getElementById('jobTabContent');
+        const items = prevention[tab] || [];
+        el.innerHTML = `<ul>${items.map(i => `<li>${i}</li>`).join('')}</ul>`;
+      }
+
+      document.querySelectorAll('.tab-btn').forEach(b => b.addEventListener('click', () => {
+        document.querySelectorAll('.tab-btn').forEach(x => x.classList.remove('active'));
+        b.classList.add('active');
+        renderTab(b.getAttribute('data-tab'));
+      }));
+
+      renderTab('dos');
+    });
+  </script>
+</body>
+</html>
