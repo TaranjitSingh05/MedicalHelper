@@ -1201,6 +1201,20 @@ section {
     margin: 0;
 }
 
+/* Breadcrumbs */
+.breadcrumbs {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+.breadcrumbs a {
+    color: #667eea;
+}
+.breadcrumbs .sep {
+    margin: 0 6px;
+    color: #aaa;
+}
+
 /* Page-specific styles */
 .page-section {
     padding: 100px 0 80px;
@@ -1413,7 +1427,7 @@ section {
 
 /* Health News Section */
 .health-news-section {
-    margin-top: 4rem;
+    margin-top: 2rem;
     text-align: center;
 }
 
@@ -1499,6 +1513,56 @@ section {
 .retry-btn:hover {
     background: #c53030;
     transform: translateY(-2px);
+}
+
+/**** Health Centers ****/
+.health-centers-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.health-centers-actions .btn,
+.health-centers-actions button {
+    padding: 10px 16px;
+}
+.location-input {
+    padding: 10px 12px;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    min-width: 260px;
+}
+.centers-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+.center-card {
+    background: white;
+    border: 1px solid #e9ecef;
+    border-radius: 12px;
+    padding: 1rem 1.25rem;
+}
+.center-card h4 {
+    margin-bottom: 0.25rem;
+}
+.center-card .meta {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+.center-card .actions {
+    display: flex;
+    gap: 8px;
+}
+.center-card .actions a {
+    background: #667eea;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 0.875rem;
 }
 
 /* News Grid */

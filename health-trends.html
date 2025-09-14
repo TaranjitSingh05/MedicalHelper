@@ -46,6 +46,17 @@
                         <a href="#" class="dropdown-toggle" data-translate="nav.healthInsights">Health Insights</a>
                         <ul class="dropdown-menu">
                             <li><a href="health-trends.html" data-translate="nav.healthTrends">Health Trends</a></li>
+                            <li class="dropdown-sub">
+                                <a href="#" data-translate="nav.riskPrevention">Risk & Prevention</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="jobs/construction.html">Construction</a></li>
+                                    <li><a href="jobs/fishery.html">Fishery</a></li>
+                                    <li><a href="jobs/factory.html">Factory</a></li>
+                                    <li><a href="jobs/agriculture.html">Agriculture</a></li>
+                                    <li><a href="jobs/domestic.html">Domestic Work</a></li>
+                                    <li><a href="risk-prevention.html">All Jobs Overview</a></li>
+                                </ul>
+                            </li>
                         </ul>
                     </li>
                     <li class="dropdown">
@@ -107,35 +118,16 @@
                     </div>
                 </div>
 
-                <!-- Featured Content Section -->
-                <div class="featured-content">
-                    <h2 data-translate="healthTrends.featured.title">Quick Health Tips</h2>
-                    
-                    <div class="featured-grid">
-                        <div class="featured-item">
-                            <div class="featured-icon">
-                                <i class="fas fa-exclamation-triangle"></i>
-                            </div>
-                            <h4 data-translate="healthTrends.featured.dengue.title">Dengue Prevention</h4>
-                            <p data-translate="healthTrends.featured.dengue.description">Current dengue outbreak areas and prevention measures for outdoor workers.</p>
-                        </div>
-                        
-                        <div class="featured-item">
-                            <div class="featured-icon">
-                                <i class="fas fa-thermometer-hot"></i>
-                            </div>
-                            <h4 data-translate="healthTrends.featured.heatwave.title">Heat Wave Safety</h4>
-                            <p data-translate="healthTrends.featured.heatwave.description">Guidelines for working safely during high temperature conditions.</p>
-                        </div>
-                        
-                        <div class="featured-item">
-                            <div class="featured-icon">
-                                <i class="fas fa-lungs"></i>
-                            </div>
-                            <h4 data-translate="healthTrends.featured.respiratory.title">Air Quality Protection</h4>
-                            <p data-translate="healthTrends.featured.respiratory.description">Respiratory health protection in high pollution areas.</p>
-                        </div>
+                <!-- Health Centers Section -->
+                <div class="health-news-section" style="margin-top:3rem;">
+                    <h2>Find Nearby Health Centers</h2>
+                    <p class="section-description">Enter a location or use your current location to find nearby hospitals and clinics.</p>
+                    <div class="health-centers-actions">
+                        <input class="location-input" type="text" id="healthLocationInput" placeholder="Enter location (e.g., Kochi, Kerala)" />
+                        <button class="btn btn-secondary" id="useMyLocationBtn">Use My Location</button>
+                        <button class="btn btn-primary" id="searchHealthCentersBtn">Search Health Centers</button>
                     </div>
+                    <div class="centers-list" id="centersList"></div>
                 </div>
             </div>
         </section>

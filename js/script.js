@@ -30,6 +30,7 @@ function setupPageSpecificFeatures() {
             setupHealthInsights();
             setupHealthNews();
             setupNewsModal();
+            setupHealthCenters();
             break;
         case 'risk-prevention':
             setupRiskPrevention();
@@ -1023,6 +1024,95 @@ function formatDate(dateString) {
         return date.toLocaleDateString();
     } catch (e) {
         return 'Recently';
+    }
+}
+
+// Health Centers - search and geolocation
+function setupHealthCenters() {
+    const input = document.getElementById('healthLocationInput');
+    const useMyLocationBtn = document.getElementById('useMyLocationBtn');
+    const searchBtn = document.getElementById('searchHealthCentersBtn');
+    const list = document.getElementById('centersList');
+    if (!list) return;
+
+    async function populateCentersFromQuery(query) {
+        // Use Google Maps text search via URL pattern; for demo we will list links.
+        const encoded = encodeURIComponent(query + ' hospital clinic');
+        const mapsSearchUrl = `https://www.google.com/maps/search/${encoded}`;
+
+        // For a simple UX, show 5-8 suggested links opening Google Maps directions via query-only
+        const suggestions = [
+            { name: 'Nearest Government Hospital', address: query, url: mapsSearchUrl },
+            { name: 'Community Health Center', address: query, url: mapsSearchUrl },
+            { name: 'Primary Care Clinic', address: query, url: mapsSearchUrl },
+            { name: 'Emergency Hospital', address: query, url: mapsSearchUrl },
+            { name: 'Diagnostic Center', address: query, url: mapsSearchUrl },
+            { name: 'Multi-speciality Hospital', address: query, url: mapsSearchUrl },
+            { name: 'Child & Mother Care Clinic', address: query, url: mapsSearchUrl },
+            { name: 'Local PHC', address: query, url: mapsSearchUrl },
+        ].slice(0, 8);
+
+        list.innerHTML = suggestions.map(s => `
+            <div class="center-card">
+                <h4>${s.name}</h4>
+                <div class="meta">${s.address}</div>
+                <div class="actions">
+                    <a href="${s.url}" target="_blank" rel="noopener noreferrer">Open in Google Maps</a>
+                </div>
+            </div>
+        `).join('');
+    }
+
+    function coordsToMapsList(lat, lng) {
+        const q = `${lat},${lng}`;
+        const mapsUrl = `https://www.google.com/maps/search/hospital+clinic/@${lat},${lng},14z`;
+        const nearby = [
+            { name: 'Nearby Hospital', address: q, url: mapsUrl },
+            { name: 'Nearby Clinic', address: q, url: mapsUrl },
+            { name: 'Nearby Health Center', address: q, url: mapsUrl },
+            { name: 'Emergency Care', address: q, url: mapsUrl },
+            { name: 'Diagnostics', address: q, url: mapsUrl },
+            { name: 'PHC', address: q, url: mapsUrl },
+        ];
+        list.innerHTML = nearby.map(s => `
+            <div class="center-card">
+                <h4>${s.name}</h4>
+                <div class="meta">${s.address}</div>
+                <div class="actions">
+                    <a href="${s.url}" target="_blank" rel="noopener noreferrer">Open in Google Maps</a>
+                </div>
+            </div>
+        `).join('');
+    }
+
+    if (useMyLocationBtn) {
+        useMyLocationBtn.addEventListener('click', () => {
+            if (!navigator.geolocation) {
+                showNotification('Geolocation not supported in this browser.', 'warning');
+                return;
+            }
+            navigator.geolocation.getCurrentPosition(
+                pos => {
+                    const { latitude, longitude } = pos.coords;
+                    coordsToMapsList(latitude, longitude);
+                },
+                err => {
+                    showNotification('Unable to get your location. Please type your location instead.', 'error');
+                },
+                { enableHighAccuracy: true, timeout: 10000 }
+            );
+        });
+    }
+
+    if (searchBtn) {
+        searchBtn.addEventListener('click', () => {
+            const q = (input && input.value.trim()) || '';
+            if (!q) {
+                showNotification('Please enter a location or use My Location.', 'warning');
+                return;
+            }
+            populateCentersFromQuery(q);
+        });
     }
 }
 
